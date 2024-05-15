@@ -4,14 +4,6 @@
 ``` bash
 docker network create ptk_products
 ``` 
-### Postgresql docker setup
-``` bash
-#Build PostfresSQL image (From the position of the Dockerfile)
-docker build . -t postgres_db
-
-#Run Postgres container from image
-docker run --name my_database --network my_network postgres_db
-```
 
 ### Spring Boot docker setup
 ``` bash
