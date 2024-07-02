@@ -9,4 +9,5 @@ public class ProductDTO {
 
     private String label;
     private double price;
+    private int quantity;
 }

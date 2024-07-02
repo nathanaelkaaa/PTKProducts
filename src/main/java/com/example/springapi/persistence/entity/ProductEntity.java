@@ -13,4 +13,5 @@ public class ProductEntity {
     private int id;
     private String label;
     private double price;
+    private int quantity;
 }

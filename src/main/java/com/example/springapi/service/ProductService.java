@@ -37,6 +37,7 @@ public class ProductService {
         productEntity.setId(generateId()); // Générer un nouvel identifiant
         productEntity.setLabel(productDTO.getLabel());
         productEntity.setPrice(productDTO.getPrice());
+        productEntity.setQuantity(productDTO.getQuantity());
         productRepository.save(productEntity);
     }
 
@@ -45,6 +46,7 @@ public class ProductService {
         optionalProductEntity.ifPresent(productEntity -> {
             productEntity.setLabel(productDTO.getLabel());
             productEntity.setPrice(productDTO.getPrice());
+            productEntity.setQuantity(productDTO.getQuantity());
             productRepository.save(productEntity);
         });
     }
@@ -57,6 +59,7 @@ public class ProductService {
         return ProductDTO.builder()
                 .label(productEntity.getLabel())
                 .price(productEntity.getPrice())
+                .quantity(productEntity.getQuantity())
                 .build();
     }
 
